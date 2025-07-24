@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Подтверждение кода</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="code" class="form-label">Код из SMS</label>
+        <input type="text" class="form-control" name="code" required>
+    </div>
+    <button type="submit" class="btn btn-success">Подтвердить</button>
+</form>
+{% if error %}<div class="alert alert-danger mt-3">{{ error }}</div>{% endif %}
+{% endblock %}
