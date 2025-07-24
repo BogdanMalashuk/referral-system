@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Активация инвайт-кода</h2>
+
+{% if activated_code %}
+    <div class="alert alert-info">
+        Вы уже активировали инвайт-код: <strong>{{ activated_code }}</strong>
+    </div>
+{% else %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="code" class="form-label">Инвайт-код</label>
+            <input type="text" class="form-control" name="code" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Активировать</button>
+    </form>
+    {% if error %}<div class="alert alert-danger mt-3">{{ error }}</div>{% endif %}
+{% endif %}
+{% endblock %}
