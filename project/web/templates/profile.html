@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Профиль</h2>
+<div class="card p-3">
+    <p><strong>Номер:</strong> {{ profile.phone_number }}</p>
+    <p><strong>Ваш инвайт-код:</strong> {{ profile.invite_code }}</p>
+    <p><strong>Вы активировали код:</strong> {{ profile.activated_code|default:"—" }}</p>
+</div>
+
+<h4 class="mt-4">
+    Приглашённые пользователи: ({{ profile.referral_count }})
+</h4>
+<ul class="list-group">
+    {% for ref in profile.referrals %}
+        <li class="list-group-item">{{ ref }}</li>
+    {% empty %}
+        <li class="list-group-item">Никто не активировал ваш код</li>
+    {% endfor %}
+</ul>
+{% endblock %}
