@@ -89,10 +89,18 @@ Authorization: Token <your_token>
 
 ---
 
-## 🧪 API Документация
+## 🧪 API Документация (Swagger UI)
+❗Для получения JSON схемы, ReDoc документации запустите проект локально
+и воспользуйтесь ссылками❗
 
-Swagger UI: http://127.0.0.1:8000/api/v1/docs/swagger/
+Авторизация в системе: 
+![request_code.jpg](project/api/swagger_screenshots/request_code.jpg)
 
-ReDoc: http://127.0.0.1:8000/api/v1/docs/redoc
+Верификация кода:
+![verify_code.jpg](project/api/swagger_screenshots/verify_code.jpg)
 
-JSON schema: http://127.0.0.1:8000/api/v1/schema/
+Получение профиля
+![profile.jpg](project/api/swagger_screenshots/profile.jpg)
+
+Активация инвайт-кода
+![activate_code.jpg](project/api/swagger_screenshots/activate_code.jpg)
