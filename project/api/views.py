@@ -1,4 +1,6 @@
 import time
+import random
+import string
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, serializers
@@ -11,6 +13,10 @@ from .doc_serializers import (
     VerifyCodeSerializer,
     ActivateInviteCodeSerializer
 )
+
+
+def generate_invite_code():
+    return ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
 
 
 @extend_schema(
