@@ -104,3 +104,25 @@ Authorization: Token <your_token>
 
 Активация инвайт-кода
 ![activate_code.jpg](project/api/swagger_screenshots/activate_code.jpg)
+
+---
+
+## 🖼️ Шаблоны
+
+Страница авторизации:
+![login.jpg](project/web/templates_screenshots/login.jpg)
+
+Верификация кода:
+![verifying.jpg](project/web/templates_screenshots/verifying.jpg)
+
+Страница профиля:
+![profile.jpg](project/web/templates_screenshots/profile.jpg)
+
+Инвайт-код (активирован)
+![activation.jpg](project/web/templates_screenshots/activation.jpg)
+
+Инвайт-код (не активирован)
+![activation2.jpg](project/web/templates_screenshots/activation2.jpg)
+
+
+
